@@ -12,7 +12,7 @@ class Database {
     private $pdo;
 
     public function __construct(){
-        $this->dotenv = Dotenv::createImmutable("../")->load();
+        $this->dotenv = Dotenv::createImmutable(dirname("../"))->load();
         $this->dsn = $_ENV["DSN"];
         $this->login = $_ENV["DB_LOGIN"];
         $this->password = $_ENV["DB_PASSWORD"];

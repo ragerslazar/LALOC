@@ -4,19 +4,24 @@ use PHPUnit\Framework\TestCase;
 use Dotenv\Dotenv;
 
 class LoginModelTest extends TestCase {
+    private $loginModel;
     private $dotenv;
 
-    public function testLogin() {
+    public function setUp(): void {
+        $this->loginModel = new LoginModel();
         $this->dotenv = Dotenv::createImmutable(dirname("../"))->load();
-        $loginModel = new LoginModel();
-        $res = $loginModel->connexionModel($_ENV["TEST_USERNAME"], $_ENV["TEST_PASSWORD"]);
+    }
+
+    public function testLogin() {
+        $res = $this->loginModel->connexionModel($_ENV["TEST_USERNAME"], $_ENV["TEST_PASSWORD"]);
         $this->assertNotNull($res);
+        $this->assertArrayHasKey("email", $res[0]);
+        $this->assertArrayHasKey("password", $res[0]);
     }
 
     public function testObjectCreation() {
-        $loginModel = new LoginModel();
-        $this->assertNotNull($loginModel);
-        $this->assertInstanceOf(LoginModel::class, $loginModel);
+        $this->assertNotNull($this->loginModel);
+        $this->assertInstanceOf(LoginModel::class, $this->loginModel);
     }
 }
 ?>

@@ -2,7 +2,7 @@
 
   require '../vendor/autoload.php';
 
-  use LALOC\controllers\CommandesController;
+  use LALOC\controllers\HistoriqueCommandesController;
   use LALOC\controllers\ContactController;
   use LALOC\controllers\DashboardController;
   use LALOC\controllers\HomeController;
@@ -33,7 +33,7 @@
   } elseif ($url == "dashboard") {
     $ctrl = new DashboardController();
   } elseif ($url == "commandes") {
-    $ctrl = new CommandesController();
+    $ctrl = new HistoriqueCommandesController();
   } elseif ($url == "tickets_admin") {
     $ctrl = new TicketsAdminController();
   } else {

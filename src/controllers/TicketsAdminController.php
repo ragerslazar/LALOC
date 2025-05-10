@@ -1,7 +1,7 @@
 <?php
 namespace LALOC\controllers;
 
-use LALOC\models\CommandesModel;
+use LALOC\models\HistoriqueCommandesModel;
 use LALOC\models\TicketsAdminModel;
 
 Class TicketsAdminController extends Controller{

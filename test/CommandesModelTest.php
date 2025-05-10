@@ -1,29 +1,31 @@
 <?php
 
-use LALOC\models\CommandesModel;
+use LALOC\models\HistoriqueCommandesModel;
 use PHPUnit\Framework\TestCase;
 
-class CommandesModelTest extends TestCase {
+class HistoriqueCommandesModelTest extends TestCase {
 
-    private $commandesModel;
+    private $HistoriqueCommandesModel;
     public function setUp(): void {
-        $this->commandesModel = new CommandesModel();
+        $this->HistoriqueCommandesModel = new HistoriqueCommandesModel();
     }
 
     public function testObject() {
-        $this->assertNotNull($this->commandesModel);
+        $this->assertNotNull($this->HistoriqueCommandesModel);
     }
 
     public function testGetCommandes() {
-        $commande = $this->commandesModel->commandesClientModel(11);
+        $commande = $this->HistoriqueCommandesModel->commandesClientModel(11);
         $this->assertNotEmpty($commande);
-        $this->assertNotEmpty($commande[0]);
-        $this->assertArrayHasKey("id_reservation", $commande[0]);
-        $this->assertNotEmpty($commande[0]["id_reservation"]);
+        foreach ($commande as $c) {
+            $this->assertNotEmpty($c);
+            $this->assertArrayHasKey("id_reservation", $c);
+            $this->assertNotEmpty($c["id_reservation"]);
+        }
     }
 
         public function testGetCommandesFail() {
-        $commande = $this->commandesModel->commandesClientModel(1);
+        $commande = $this->HistoriqueCommandesModel->commandesClientModel(1);
         $this->assertEmpty($commande);
     }
 }

@@ -20,6 +20,9 @@ Class TicketsAdminController extends Controller{
         if (!isset($_SESSION["user"])) {
             $_SESSION["loginNeeded"] = "Vous devez être connecté pour accéder à cette page.";
             header("Location: home");
+        } elseif ($_SESSION["user"][0]["type"] !== "admin") {
+            $_SESSION["permMissing"] = "Vous n'avez pas la permission d'accéder à cette page.";
+            header("Location: home");
         } else {
             $tickets = $this->fetchTicketsController();
             $this->render('tickets_admin', compact("tickets"));

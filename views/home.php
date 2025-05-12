@@ -39,16 +39,29 @@
 
     <?php 
     if (isset($_SESSION["loginNeeded"])) {
+        $message = $_SESSION["loginNeeded"];
         echo "
         <br>
         <div class=\"container\">
             <div class=\"alert alert-dismissible fade show bg-danger-subtle\" role=\"alert text-center\">
-                <strong>Erreur !</strong> Vous devez être connecté pour accéder à cette page !
+                <strong>Erreur !</strong> $message
                 <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
             </div>
         </div>
         ";
         unset($_SESSION["loginNeeded"]);
+    } elseif (isset($_SESSION["permMissing"])) {
+        $message = $_SESSION["permMissing"];
+        echo "
+        <br>
+        <div class=\"container\">
+            <div class=\"alert alert-dismissible fade show bg-danger-subtle\" role=\"alert text-center\">
+                <strong>Erreur !</strong> $message
+                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+            </div>
+        </div>
+        ";
+        unset($_SESSION["permMissing"]);
     }
     ?>
     

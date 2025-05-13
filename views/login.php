@@ -14,7 +14,7 @@
 
             }
             ?>
-            <div class="formulaire-login" style="padding: 1.3rem">
+            <div class="formulaire-login">
                 <div class="mb-3 text-center">
                     <h1>Connectez vous à votre compte</h1>
                 </div>

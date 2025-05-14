@@ -55,12 +55,16 @@
 
             <div class="col mb-3">
                 <h5>A propos de</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt cupiditate culpa, eos eius fuga dolor aspernatur explicabo voluptate, perferendis cumque eaque excepturi aut vel nostrum veniam! Voluptatum quod eligendi minus?</p>
+                <p>LALOC vous accompagne avec des solutions simples et efficaces.
+                    Nous mettons l’innovation au service de votre expérience pour un quotidien facilité.
+                </p>
             </div>
 
             <div class="col mb-3">
                 <h5>Informations Légales</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, dolores odio iusto hic eveniet ipsam ipsa odit saepe. Quas qui alias dicta sunt! Magnam odit distinctio perspiciatis voluptatum repudiandae adipisci!</p>
+                <p>LALOC respecte les réglementations en vigueur et veille à la protection des données et des droits de ses utilisateurs.
+                    Pour toute question, contactez-nous via notre formulaire de <a href="contact">contact</a>.
+                </p>
             </div>
 
             <div class="col mb-3" id="footer-login">

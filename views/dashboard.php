@@ -1,5 +1,16 @@
 <main class="main-dashboard">
   <div class="container py-5">
+      <?php
+      if (isset($_SESSION["password_update_success"])) {
+          $message = $_SESSION["password_update_success"];
+          echo "
+                <div class=\"alert alert-success text-center\" role=\"alert\">
+                    <p>$message !</p>
+                </div>
+                ";
+          unset($_SESSION["password_update_success"]);
+      }
+      ?>
     <div class="mb-4">
       <h1 class="display-6">Bonjour, <span class="fw-bold"><?php echo $_SESSION["user"][0]["prenom"] ?></span></h1>
       <p class="text-muted">Bienvenue dans votre espace client.</p>
@@ -22,8 +33,8 @@
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">Mon profil</h5>
-            <p class="card-text">Mettez à jour vos informations personnelles et vos préférences.</p>
-            <a href="/profil" class="btn btn-outline-primary">Modifier mon profil</a>
+            <p class="card-text">Mettez à jour vos informations personnelles.</p>
+            <a href="profil" class="btn btn-outline-primary">Modifier mon profil</a>
           </div>
         </div>
       </div>

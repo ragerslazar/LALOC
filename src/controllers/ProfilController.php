@@ -2,7 +2,6 @@
 
 namespace LALOC\controllers;
 
-use LALOC\controllers\Controller;
 use LALOC\models\ProfilModel;
 
 class ProfilController extends Controller

@@ -1,13 +1,31 @@
-/* Import des polices */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* RESET */
+/* ====== GLOBAL ====== */
 body {
     margin-top: 5rem;
 }
 
-/* HEADER NAVBAR */
+section {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+button {
+    border-radius: 5px !important;
+}
+
+li, p, label, h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ====== HEADER ====== */
+#logo_nav {
+    border-radius: 5px;
+}
+
 header {
     position: fixed;
     z-index: 1000;
@@ -17,16 +35,6 @@ header {
 
 header nav {
     background-color: #1d44f3;
-}
-
-#logo_nav {
-    border-radius: 5px;
-}
-
-header li, p, label, h1, h2, h3, h4, h5, h6 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 header li a {
@@ -40,9 +48,15 @@ header li a {
     justify-content: space-around;
 }
 
-/* MAIN */
+/* ====== MAIN ====== */
 main.main-home {
     margin-top: 4rem;
+}
+
+main.main-service,
+main.main-contact,
+main.main-register {
+    margin-top: 8rem;
 }
 
 main.main-login {
@@ -55,27 +69,20 @@ main.main-register {
     margin-bottom: 9rem;
 }
 
-main.main-louer {
-    margin-top: 8rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
-}
-
-main.main-profil {
-    margin-bottom: 8rem;
-}
-
-main.not-found.text-center, main.main-dashboard, main.main-commandes, main.main-tickets-admin,
-main.main-profil, main.main-service, main.main-contact, main.main-register {
+main.not-found.text-center,
+main.main-dashboard,
+main.main-commandes,
+main.main-tickets-admin, main.main-details {
     margin-top: 8rem;
 }
 
-/* CAROUSEL */
+/* ====== CAROUSEL ====== */
 #carouselHome {
     max-width: 100%;
 }
 
-.carousel-item img, .carousel-item.active img {
+.carousel-item img,
+.carousel-item.active img {
     max-height: 40rem;
     object-fit: cover;
 }
@@ -83,8 +90,8 @@ main.main-profil, main.main-service, main.main-contact, main.main-register {
 .carousel-message {
     position: absolute;
     top: 10%;
-    left: 70%;
     max-width: 100%;
+    left: 70%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px 20px;
@@ -109,22 +116,7 @@ main.main-profil, main.main-service, main.main-contact, main.main-register {
     align-items: center;
 }
 
-/* FOOTER */
-footer {
-    max-width: 100%;
-}
-
-#footer-login {
-    text-align: center;
-}
-
-/* SECTIONS */
-section {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-}
-
-/* SERVICES */
+/* ====== SERVICES ====== */
 .section-service {
     display: flex;
     flex-direction: column;
@@ -141,12 +133,52 @@ section {
     margin-bottom: 2rem;
 }
 
-/* FILTRES ET FORMULAIRES */
+.card-services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 120px;
+}
+
+/* ====== LOUER ====== */
+.main-louer {
+    margin-top: 8rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.main-louer .col-sm-4,
+.main-louer .col-sm-8 {
+    padding: 1.5rem !important;
+    border: 1px solid #b1b8ae !important;
+    border-radius: 5px;
+}
+
+.main-louer .col-sm-4 {
+    width: 12%;
+    height: 100%;
+}
+
+.main-louer .col-sm-8 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 30px;
+    width: 87%;
+}
+
+.main-louer .row {
+    column-gap: 15px;
+}
+
 .filters {
     display: flex;
 }
 
-.forumaire-contact, .formulaire-login {
+/* ====== FORMULAIRES ====== */
+.forumaire-contact,
+.formulaire-login {
     background-color: #1d44f325;
     border-radius: 5px;
     padding: 1rem;
@@ -156,17 +188,16 @@ section {
     width: 100%;
 }
 
-/* BOUTONS */
-.btn.btn-primary {
-    background-color: rgb(97, 71, 36);
-    border-color: rgb(97, 71, 36);
+/* ====== FOOTER ====== */
+footer {
+    max-width: 100%;
 }
 
-button {
-    border-radius: 5px !important;
+#footer-login {
+    text-align: center;
 }
 
-/* SOCIAL ICONS */
+/* ====== SOCIALS ====== */
 .socials {
     width: 100%;
     overflow: hidden;
@@ -179,10 +210,12 @@ button {
     align-items: center;
 }
 
-/* CARDS */
-.card-services {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    column-gap: 120px;
+/* ====== BOUTONS ====== */
+.btn.btn-primary {
+    background-color: rgb(97, 71, 36);
+    border-color: rgb(97, 71, 36);
+}
+
+.img-annonce {
+    width: inherit;
 }

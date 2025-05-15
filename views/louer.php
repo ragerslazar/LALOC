@@ -23,9 +23,9 @@
                     <img src="./img/services/img1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $engine["marque"]. " " .$engine["modele"] ?></h5>
-                        <p class="card-text">💶 Prix: <?php echo $engine["prix"]. "€" ?></p>
+                        <p class="card-text">💶 Prix: <?php echo number_format($engine["prix"], 0, ",", " ") . "€" ?></p>
 
-                        <a href="#" class="btn btn-primary">Details</a>
+                        <a href="details?vehicule=<?php echo $engine["id_vehicule"] ?>" class="btn btn-primary">Details</a>
                     </div>
                 </div>
             <?php endforeach; ?>

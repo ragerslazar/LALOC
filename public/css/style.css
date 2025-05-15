@@ -163,8 +163,8 @@ main.main-tickets-admin, main.main-details {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
     row-gap: 30px;
+    column-gap: 80px;
     width: 87%;
 }
 

@@ -10,6 +10,7 @@
   use LALOC\controllers\LogoutController;
   use LALOC\controllers\LouerController;
   use LALOC\controllers\NotFoundController;
+use LALOC\controllers\ProductDetailsController;
 use LALOC\controllers\ProfilController;
 use LALOC\controllers\RegisterController;
   use LALOC\controllers\ServiceController;
@@ -39,6 +40,8 @@ use LALOC\controllers\RegisterController;
     $ctrl = new TicketsAdminController();
   } elseif ($url == "profil") {
       $ctrl = new ProfilController();
+  } elseif ($url == "details") {
+      $ctrl = new ProductDetailsController();
   } else {
     $ctrl = new NotFoundController();
   }

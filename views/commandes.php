@@ -20,7 +20,7 @@
           <th scope="row"><?php echo $order["id_reservation"]; ?></th>
           <td><?php echo $order["date_reservation"]; ?></td>
           <td><?php echo $order["marque"]. " " .$order["modele"] ?></td>
-          <td><?php echo $order["prix"] . " €"; ?></td>
+          <td><?php echo number_format($order["prix"], 0, ",", " ") . " €"; ?></td>
           <?php 
           if (new DateTime($order["fin_location"]) > $date) {
             echo "<td><span class=\"badge bg-success\">En cours</span></td>";

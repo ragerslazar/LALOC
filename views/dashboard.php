@@ -44,7 +44,7 @@
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">Besoin d'aide ?</h5>
-            <p class="card-text">Accédez à la FAQ ou contactez notre service client.</p>
+            <p class="card-text">Contactez notre service client.</p>
             <a href="contact" class="btn btn-outline-secondary">Contact</a>
           </div>
         </div>

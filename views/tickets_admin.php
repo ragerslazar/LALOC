@@ -41,7 +41,7 @@
                 </div>
             </div>
           </td>
-          <td><?php echo "Prout"; ?></td>
+          <td><?php echo $ticket["statut"]; ?></td>
           <td>
             <button class="btn btn-sm btn-outline-warning">En Cours</button>
             <button class="btn btn-sm btn-outline-danger">Fermé</button>

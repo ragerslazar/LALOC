@@ -43,8 +43,10 @@
           </td>
           <td><?php echo $ticket["statut"]; ?></td>
           <td>
-            <button class="btn btn-sm btn-outline-warning">En Cours</button>
-            <button class="btn btn-sm btn-outline-danger">Fermé</button>
+              <form action="tickets_admin" method="get">
+                <button type="submit" name="actionOpen" value="<?php echo $ticket["id_support"]; ?>" class="btn btn-sm btn-outline-warning">En Cours</button>
+                <button type="submit" name="actionClose" value="<?php echo $ticket["id_support"];?>" class="btn btn-sm btn-outline-danger">Fermé</button>
+              </form>
           </td>
         </tr>
         <?php endforeach; ?>

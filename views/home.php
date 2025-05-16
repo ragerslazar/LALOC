@@ -6,13 +6,13 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="./img/carousel_home/img1.png" class="d-block w-100" alt="..." id="testimg">
+            <img src="./img/carousel_home/img1.png" class="d-block w-100" alt="service1" id="testimg">
             </div>
             <div class="carousel-item">
-            <img src="./img/carousel_home/img2.png" class="d-block w-100" alt="...">
+            <img src="./img/carousel_home/img2.png" class="d-block w-100" alt="service2">
             </div>
             <div class="carousel-item">
-            <img src="./img/carousel_home/img3.png" class="d-block w-100" alt="...">
+            <img src="./img/carousel_home/img3.png" class="d-block w-100" alt="service3">
             </div>
         </div>
         
@@ -75,7 +75,7 @@
                     <p class="card-text">Simplifiez votre quotidien et économisez grâce à un modèle plus agile et économique.</p>
                     <a href="service#section-service" class="btn btn-primary">En savoir plus</a>
                 </div>
-                <img src="./img/services/img1.jpg" class="card-img-top" alt="...">
+                <img src="./img/services/img1.jpg" class="card-img-top" alt="service1">
             </div>
 
             <div class="card" style="width: 18rem;">
@@ -85,7 +85,7 @@
                     <p class="card-text">Bénéficiez de la liberté de rouler quand vous le souhaitez, tout en optimisant vos coûts et en évitant les obligations à long terme.</p>
                     <a href="service#section-service" class="btn btn-primary">En savoir plus</a>
                 </div>
-                <img src="./img/services/img2.jpg" class="card-img-top" alt="...">
+                <img src="./img/services/img2.jpg" class="card-img-top" alt="service2">
             </div>
 
             <div class="card" style="width: 18rem;">
@@ -95,7 +95,7 @@
                     <p class="card-text">Notre plateforme vous offre un contrôle total, que ce soit pour des voitures, des équipements ou des espaces, pour une expérience de location fluide et sans tracas.</p>
                     <a href="service#section-service" class="btn btn-primary">En savoir plus</a>
                 </div>
-                <img src="./img/services/img3.jpg" class="card-img-top" alt="...">
+                <img src="./img/services/img3.jpg" class="card-img-top" alt="service3">
             </div>
         </div>
     </section>
@@ -112,9 +112,9 @@
             <div class="col">
                 <h3 class="social-title">Réseaux sociaux</h3>
                 <div class="social-icons">
-                    <img src="./img/footer/insta.png" width="50" height="50" alt="...">
-                    <img src="./img/footer/x.png" width="50" height="50" alt="...">
-                    <img src="./img/footer/youtube.png" width="50" height="50" alt="...">
+                    <img src="./img/footer/insta.png" width="50" height="50" alt="instagram">
+                    <img src="./img/footer/x.png" width="50" height="50" alt="x">
+                    <img src="./img/footer/youtube.png" width="50" height="50" alt="youtube">
                 </div>
                 <br>
                 <h3 class="newsletter-title">Newsletter</h3>

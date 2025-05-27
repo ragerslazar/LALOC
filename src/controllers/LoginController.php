@@ -14,17 +14,34 @@ Class LoginController extends Controller {
         return $this->LoginModel->connexionModel($email, $password);
     }
 
+    private static function checkValues($array): bool {
+        $empty = false;
+        foreach ($array as $val) {
+            if (!isset($_POST[$val]) || empty($_POST[$val])) {
+                $empty = true;
+            }
+        }
+        return $empty;
+    }
+
     public function index(): void{
         $status = null;
         $login = null;
-        if (isset($_POST["loginEmail"]) && isset($_POST["loginPwd"])) {
-            $email = $_POST["loginEmail"];
-            $password = $_POST["loginPwd"];
-            $login = $this->connexionController($email, $password);
-            if (empty($login)) {
-                $status = "login_failed";
+        if ($_SERVER["REQUEST_METHOD"] === "POST" || isset($_POST["submit"])) {
+            $array = ["loginEmail", "loginPwd"];
+            $values = $this->checkValues($array);
+
+            if (!$values) {
+                $email = $_POST["loginEmail"];
+                $password = $_POST["loginPwd"];
+                $login = $this->connexionController($email, $password);
+                if (empty($login)) {
+                    $status = "login_failed";
+                } else {
+                    $status = "OK";
+                }
             } else {
-                $status = "OK";
+                $status = "values_missing";
             }
         }
 

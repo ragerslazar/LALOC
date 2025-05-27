@@ -11,6 +11,12 @@
                     <p>Adresse email ou mot de passe incorrect !</p>
                 </div>
                 ";
+            } elseif ($status == "values_missing") {
+                echo "
+                <div class=\"alert alert-danger text-center\" role=\"alert\">
+                    <p>Des données sont manquantes !</p>
+                </div>
+                ";
 
             }
             ?>
@@ -30,7 +36,7 @@
                     </div>
                     
                     <div class="mb-3 text-center">
-                        <button type="submit" class="btn btn-primary">Connexion</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Connexion</button>
                     </div>
                 </form>
                 <p style="margin-bottom: 0;">Pas encore de compte ? <a href="register">Inscrivez-vous !</a></p>

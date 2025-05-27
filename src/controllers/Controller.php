@@ -10,5 +10,15 @@ Class Controller {
         $contenue = ob_get_clean();
         include('../views/template/template.php');
     }
+
+    protected function checkValues($array): bool {
+        $empty = false;
+        foreach ($array as $val) {
+            if (!isset($_POST[$val]) || empty($_POST[$val])) {
+                $empty = true;
+            }
+        }
+        return $empty;
+    }
 }
 ?>

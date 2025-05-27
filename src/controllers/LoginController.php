@@ -14,15 +14,6 @@ Class LoginController extends Controller {
         return $this->LoginModel->connexionModel($email, $password);
     }
 
-    private static function checkValues($array): bool {
-        $empty = false;
-        foreach ($array as $val) {
-            if (!isset($_POST[$val]) || empty($_POST[$val])) {
-                $empty = true;
-            }
-        }
-        return $empty;
-    }
 
     public function index(): void{
         $status = null;

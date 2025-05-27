@@ -14,6 +14,12 @@
                     <p>Cette adresse email est déjà utilisée !</p>
                 </div>
                 ";
+            } elseif ($status == "values_missing") {
+                echo "
+                <div class=\"alert alert-danger text-center\" role=\"alert\">
+                    <p>Des données sont manquantes !</p>
+                </div>
+                ";
             }
             ?>
             <div class="formulaire-login" style="padding: 1.3rem">
@@ -32,7 +38,7 @@
 
                     <div class="mb-3">
                         <label for="nom">Nom :</label>
-                        <input type="text" class="form-control" name="registerNom" id="registerNom" placeholder="Sebastopol">
+                        <input type="text" class="form-control" name="registerNom" id="registerNom" placeholder="Sebastopol" required>
                     </div>
 
                     <div class="mb-3">
@@ -66,7 +72,7 @@
                     </div>
                     
                     <div class="mb-3 text-center">
-                        <button type="submit" class="btn btn-primary">Inscription</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Inscription</button>
                     </div>
                 </form>
                 <p style="margin-bottom: 0;">Vous possédez déjà un compte ? <a href="login">Conntectez-vous !</a></p>

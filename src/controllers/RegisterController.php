@@ -17,38 +17,35 @@ Class RegisterController extends Controller{
     public function index(){
         $status = null;
 
-        if ((isset($_POST['submit']) || $_SERVER["REQUEST_METHOD"] === "POST") &&
-            !empty($_POST["registerCivilite"]) &&
-            !empty($_POST["registerNom"]) &&
-            !empty($_POST["registerPrenom"]) &&
-            !empty($_POST["registerAdresse"]) &&
-            !empty($_POST["registerVille"]) &&
-            !empty($_POST["registerCP"]) &&
-            !empty($_POST["registerEmail"]) &&
-            !empty($_POST["registerPwd"])) {
+        if ((isset($_POST['submit']) || $_SERVER["REQUEST_METHOD"] === "POST")) {
+            $array = ["registerCivilite", "registerNom", "registerPrenom", "registerAdresse", "registerVille", "registerCP", "registerEmail", "registerPwd"];
+            $values = $this->checkValues($array);
 
-            $civilite = $_POST["registerCivilite"];
-            $nom = $_POST["registerNom"];
-            $prenom = $_POST["registerPrenom"];
-            $adresse = $_POST["registerAdresse"];
-            $ville = $_POST["registerVille"];
-            $cp = $_POST["registerCP"];
-            $email = $_POST["registerEmail"];
-            $password = $_POST["registerPwd"];
+            if (!$values) {
+                $civilite = $_POST["registerCivilite"];
+                $nom = $_POST["registerNom"];
+                $prenom = $_POST["registerPrenom"];
+                $adresse = $_POST["registerAdresse"];
+                $ville = $_POST["registerVille"];
+                $cp = $_POST["registerCP"];
+                $email = $_POST["registerEmail"];
+                $password = $_POST["registerPwd"];
 
-            try {
-                $insertUser = $this->inscriptionController($civilite, $prenom, $nom, $adresse, $ville, $cp, email: $email, password: $password
-                );
-                if ($insertUser->rowCount() > 0) {
-                    $status = "OK";
+                try {
+                    $insertUser = $this->inscriptionController($civilite, $prenom, $nom, $adresse, $ville, $cp, email: $email, password: $password
+                    );
+                    if ($insertUser->rowCount() > 0) {
+                        $status = "OK";
+                    }
+                } catch (PDOException $e) {
+                    if ($e->getCode() == 23000) {
+                        $status = 23000;
+                    }
                 }
-            } catch (PDOException $e) {
-                if ($e->getCode() == 23000) {
-                    $status = 23000;
-                }
+            } else {
+                $status = "values_missing";
             }
-        } else {
-            $status = "values_missing";
+
         }
 
         $this->render('register', compact("status"));

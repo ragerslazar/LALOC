@@ -15,6 +15,7 @@ use LALOC\controllers\ProfilController;
 use LALOC\controllers\RegisterController;
   use LALOC\controllers\ServiceController;
   use LALOC\controllers\TicketsAdminController;
+  use LALOC\controllers\PasserCommandeController;
 
   $url = $_GET["url"] ?? null;
   session_start();
@@ -42,6 +43,8 @@ use LALOC\controllers\RegisterController;
       $ctrl = new ProfilController();
   } elseif ($url == "details") {
       $ctrl = new ProductDetailsController();
+  } elseif ($url = "order") {
+      $ctrl = new PasserCommandeController();
   } else {
     $ctrl = new NotFoundController();
   }

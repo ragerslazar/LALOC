@@ -17,7 +17,7 @@ class LouerModel {
     }
 
     public function consulterAnnoncesModel() {
-        return $this->db->query("SELECT * FROM vehicule")->fetchAll();
+        return $this->db->query("SELECT * FROM vehicule WHERE dispo = :dispo", [":dispo" => 1])->fetchAll();
     }
 
     public function vehiculeFilteredMarqueModel($marque) {

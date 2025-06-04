@@ -55,7 +55,8 @@ main.main-home {
 
 main.main-service,
 main.main-contact,
-main.main-register {
+main.main-register,
+main.main-order {
     margin-top: 8rem;
 }
 
@@ -186,6 +187,17 @@ main.main-tickets-admin, main.main-details {
     background-color: #1d44f325;
     border-radius: 5px;
     padding: 1rem;
+}
+
+.pay_method {
+    background-color: #1d44f325;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70%;
+    row-gap: 10px;
 }
 
 .formulaire-login form {
